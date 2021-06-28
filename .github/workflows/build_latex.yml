@@ -39,19 +39,18 @@ jobs:
           compiler: makeindex
           args: -s StyleInd.ist
       
-      - name: bibtex main
+      - name: biber main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: main.aux
-          compiler: bibtex
-          args:
+          root_file: main
+          compiler: biber
           
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
         with:
           root_file: main.tex
           compiler: pdflatex
-          args: -interaction=nonstopmode -shell-escape
+          args: -interaction=nonstopmode -shell-escape x 2
           
       - name: Publish to GitHub pages
         if: success() && github.ref == 'refs/heads/main'
