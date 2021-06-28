@@ -110,10 +110,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: gh-pages
-      - name: Commit files # commit the output folder
+          path: gh-pages
+      - name: Copy and Commit main.pdf # commit the output folder
         run: |
-          git config --local user.email "test@github.com"
-          git config --local user.name "GitHub Action test"
+          cp main.pdf gh-pages/main.pdf
+          cd gh-pages
+          git config --local user.email "kontakt@jc-otto.de"
+          git config --local user.name "GitHub Action - Jan"
           git add main.pdf
           git commit -m "main.pdf changed"
       - name: Push changes # push the output folder to your repo
@@ -122,3 +125,4 @@ jobs:
           branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
+          directory: gh-pages
