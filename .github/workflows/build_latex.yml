@@ -53,12 +53,25 @@ jobs:
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
           
+      - name: pdflatex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: main.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+          
+      - name: upload pdf to workflow tab
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: main.pdf
+          
       - name: Publish to GitHub pages
         if: success() && github.ref == 'refs/heads/main'
         uses: crazy-max/ghaction-github-pages@v1
         with:
           target_branch: gh-pages
-          build_dir: build/
+          build_dir: public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
