@@ -1,0 +1,445 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.4 (26/09/2018)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\input{structure.tex} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\IfFileExists{vars.tex}{\input{vars.tex}}{\newcommand{\matriculationNumber}{XXXXX}}
+
+\hypersetup{pdftitle={Intercultural Communication Portfolio – Jan Otto},pdfauthor={Jan Otto}} % Uncomment and fill out to include PDF metadata for the author and title of the book
+
+\usepackage{hyperref} % Required for hyperlinks
+\usepackage{ccicons}  % CC license icons+
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{tikz}
+
+
+\usetikzlibrary{mindmap}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty} % Suppress headers and footers on the title page
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.pdf}};
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Intercultural Communication Portfolio\\[15pt] % Book title
+{\Large INFB6417 – SS 2021 – Dr. Nina Dziatzko}\\[20pt] % Subtitle
+{\huge Jan Otto – \matriculationNumber}}}; % Author name
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2021 Jan Otto\\ % Copyright notice
+
+\noindent \textsc{Published by Jan Otto}\\ % Publisher
+
+\noindent \href{https://github.com/derOtto/ICC-Portfolio}{https://github.com/derOtto/ICC-Portfolio}\\ % URL
+
+\noindent \href{https://creativecommons.org/licenses/by-nc-sa/3.0/}{\ccbyncsa}
+
+\noindent Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{https://creativecommons.org/licenses/by-nc-sa/3.0/}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information, replace this with your own license (if any)
+
+%\noindent \textit{First printing, March 2019} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\onehalfspacing
+
+\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % Disable headers and footers for the following pages
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right side of the book
+
+\pagestyle{fancy} % Enable headers and footers again
+
+
+
+\part{Part One – Negotiation}
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\index{Observations}
+\chapter{Observations during the negotiation}
+\vspace{-2cm}
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
+level 1/.append style={level distance=5cm,sibling angle=100},
+level 2/.append style={level distance=3cm,sibling angle=45},]
+	\node{Negotiation Notes}
+	child { node {UA}
+		child { node {briefed by different departments}}
+		child { node {where told to do it, not to blame}}
+		child { node {agreed on critic}}
+		child { node {discussed privatly (muted)}}
+		child { node {appologize and look ahead}}
+	}
+	child { node {Astral}
+		child { node {asks questions to UA}}
+		child { node {where told to do it, not to blame}}
+		child { node {appologize, not happen again}}
+	}
+	child { node {Mediator}
+		child { node {soulution should be found}}
+		child { node {Introduction}
+			child { node {introduced himself}}
+			child { node {asked parties to introduce themselves}}
+		}
+		child { node {structures the negotiation}}
+		child { node {neutral, both sides should be heard}}
+		child { node {made conditions clear}}
+		child { node {Intervention}
+			child { node {no one speaking}}
+			child { node {something not clear}}
+		}
+		child { node {board for structuring}}
+		child { node {no topic introcuction}}
+		child { node {online meeting rules missing}}
+	};
+\end{tikzpicture}
+
+\index{Feedback}
+\chapter{Feedback}
+\index{Mediator}
+\section{Mediator}
+\subsection{What techniques did the mediator use to get the conversation going?}
+The mediator firstly introduced himself and asked the parties to introduce themselves.
+He than said, that he assumes everyone want to find a solution so that all participants know it's worth to join and take part on this negotiation.
+
+Before the negotiation started, the mediator made some rules, naming:
+\begin{itemize}
+	\item The mediator is neutral, but intervene if a party won't be heard
+	\item Talk to each other before releasing information of the meeting.
+	\item be open minded
+	\item be polite
+	
+\end{itemize}
+
+Also he structured the process of the meeting with an online board where notes where taken and anybody could look at.
+There firstly both parties wrote down some topics, which where discussed afterwards piecemeal.
+
+Furthermore he always asked if there is something to add by the other party, so everyone could add their point of view.
+
+\subsection{At what points did he intervene and why?}
+Interventions were rarely needed and therefore only used, when no one was speaking but the explanation was not understood.
+At some point when both parties blamed each other, he also intervene so they could solve this later on the solution finding phase.
+
+\subsection{What did he do to find out the interests of the parties?}
+The interests were found out as a result of the parties write down there topics on the board. These were than specified by explanation and discussion later.
+
+\subsection{Were emotions discussed?}
+Since no one was really emotional, no emotions were discussed at all.
+
+\subsection{What effects did this have?}
+This question is void by reason of no discussion.
+
+\subsection{Was the mediator sensitive to different cultures? How did this show?}
+He explained that for the most "[e]nglish is not there mother tongue", what all should keep in mind.
+
+\subsection{What was good about the way the conversation was conducted?}
+The conversation was good structured and for this reason results-oriented.
+
+\subsection{What could have been better?}
+The topic could be mentioned in the introduction when there are people in the meeting like the observers who don't know what happened before.
+
+Sometimes there are problems with online meetings, such one cut in. A solution would be some rules for online meetings at the beginning like raise your hands and make clear, when you finished your explanation.
+
+\section{Party 1 (UA)}
+\subsection{How prepared were the parties?}
+The UA party had detailed data and where also briefed by different departments.
+
+\subsection{How did they behave?}
+They were self-confident, furthermore they let the other party finish and don't interrupt.
+Sometime they discussed some things privately (muted) before they released them to the other party.
+
+Later on they accepted (parts) of the critics and apologized.
+
+\subsection{What did they do to find a solution (questions to others, disclosure of their own interests, etc.)?}
+They explained there standpoint and also asked questions to the Astral party. They're also compromised.
+
+\subsection{Were they culturally sensitive? How did this show?}
+No such situation showed up to be needed.
+
+\subsection{What could have been improved?}
+They could say something like: Excuse us, we need something to discuss shortly, when they talk privately, because it is more complicated in online meetings to know what's going on (just muted accidentally or private discussion needed).
+
+\section{Party 2 (Astral)}
+\subsection{How prepared were the parties?}
+The Astral party was well informed, too.
+
+\subsection{How did they behave?}
+She was also self-confident and didn't interrupt UA.
+
+At the end she also apologized and promised that this should not happen again.
+
+\subsection{What did they do to find a solution (questions to others, disclosure of their own interests, etc.)?}
+She asked some questions to explain by the UA party. More than that she compromised, too.
+
+\subsection{Were they culturally sensitive? How did this show?}
+Comparable there also was no such situation, where she needs to be especially culturally sensitive.
+
+\subsection{What could have been improved?}
+In an online meeting, she could say, when a point is finished to move on.
+
+
+\part{Part Two – Reflection}
+
+\chapter{Reflection Questions on negotiation process}
+\section{Part 1 – Intercultural Competence}
+\subsection{What was my first reaction when I heard about the task?}
+When I first heard about the task, I hardly understood what this going to be.
+I just had a lot of questions, like:
+\begin{itemize}
+	\item What do we have to negotiate about?
+	\item Will this role play be about two parties negotiating a contract like a purchase contract?
+	\item What will be the role of the mediator in this scope?
+	\item What do I need to do?
+	\item Would be my english good enough?
+	\item ...
+\end{itemize}
+
+\subsection{How do I react when confronted to ambiguous/uncertain situations?}
+When I notice such a situation, first I try to be calm.
+When possible I try to think about what is the problem and how could I do to fix this.
+
+\subsection{Which strategies do I use in order to reduce uncertainty?}
+To reduce uncertainty, I try to be prepared as much as possible.
+So I check what the situation will be. I read information needed for this job. Also I try to ask me, what questions could I be asked and develop answers for them (in my mind).
+
+\subsection{What expectations did you have towards this negotiation situation? What happened like expected? What did not? Why?}
+I was unsure what the negotiation procedure should be more precisely what has each person to do exactly (and when)?
+So I thought there will be moments when no one knows what to do.
+Besides I was pretty sure there will be a few conflict situations, because I know one could easy obsess about a role play and stay stubborn.
+Nevertheless none of this expectations were true.
+The mediator really knew how this negotiation should proceed and although the parties defend their standpoint, they didn't battle and were calm.
+
+\section{Part 2 – Language}
+\subsection{How did we define the lingua franca for our groupwork? In which language did we	make the negotiation?}
+We didn't really discuss which lingua fanca to use. At the kick off meeting we started speaking english and shortly asked if we should do our negotiation in english. After no one disagreed it was defined implicit. So we just wrote the whole time in english and also done our negotiation in english too.
+
+\subsection{Who decided about the language? Why? How comfortable did I feel with the choice? How did this affect my contributions?}
+As said no one really decided explicitly about the language. The mediator just started to talk in english and we all others spoke english as well. Later than he asked if we want to use the English language and since we also have to write our portfolio in english nobody cared.
+
+I was completely fine with the language because it is no big deal for our generation to speak and write in english.
+English is just everyday business in computer science scopes as for example you always use english in programming and documentation.
+
+The only affection to my contributions was I had to think a little bit more about grammar and words than in German.
+
+
+\subsection{Were other languages used as well? If yes, which ones?}
+No, there were no other languages used as well. We completely wrote and spoke in English.
+
+\section{Part 3 – Communication and negotiation}
+\subsection{Which communicative styles were used in the negotiation (give examples for verbal/non-verbal/para-verbal and extra-verbal communication)?}
+Both parties used a assertive communication style. They weren't aggressive but expressed their needs but also respect the other party's needs.
+
+As an example for verbal communication they asked the other party actively what their desires are but also told them theirs.
+Their assertive communication style also showed up in non-verbal communication as they didn't look away or bored the other party speaking.
+
+\subsection{How many negotiators were in your group? What were the goals of both negotiating parties (win-win or win-lose)?}
+There were three negotiators in our group. More precisely one person was representing Astral and the two others UA.
+
+They both had the same goal of the negotiation process, naming finding out what's gone wrong and how to continue in the future. 
+Both parties wanted to finish their mission together, that's why they needed a win-win situation. Thusly they agreed on failures happened on both sides and also the future mission require both companies.
+
+\subsection{What personal styles did you observe/use? ([in]formal, [in]directness, emotional expressiveness / restraint, general agreement / details, inductive / deductive)}
+I observed that they used more of an formal communication style, except they maybe missing some words at the moment as they shortly slid into the informal.
+
+They also were more direct such as they questioned the other party directly so they also get an answer.
+
+Neither were the emotional expressiveness nor restraint. They just use average emotions, they didn't be angry or didn't talk.
+
+They definitively didn't just agreed to everything from the other party. Instead they detailed negotiated about what went wrong, how could this prevented in the future, who will pay how much for what and so on.
+
+\subsection{How did the group manage the time?}
+We had a time span of one to four hours but evaluate to need about two hours.
+
+In the negotiation the mediator seems to manage the time by continue to an other topic when no new information were found but also asked questions when something was not clear right now and we had time for this.
+
+After one hour the group agreed on a five minute break and finished the negotiation about an other hour later.
+
+\section{Part 4 – Team Dynamics}
+\subsection{What kind of team dynamics did you observe in your team? How did you manage these?}
+At the day of our kick-off meeting we were formed as by pseudo randomized building of the group. For this the lecturer used breakout-rooms where we were put together.
+
+In the storming phase especially I talked about my concerns of recording (with camera) on dangerously insecure platforms like Zoom. The other team members understood my opinion and give me the opportunity to ask my lecturer.
+
+With the feedback of my lecturer, that video recording is not required but better for the active parties I went to the norming phase. My mediator than classified us and suggested me to be a observer. Everyone agreed so that my misgivings were cleared.
+
+In the performing phase we done our negotiation.
+
+\subsection{Did you meet personally or virtually? How did this affect your cooperation?}
+We met virtually, because of the pandemic.
+
+Undoubtedly there are positive and negative affections on our cooperation resulting of meeting virtually.
+On the one hand it is much easier to set a date because you don't need to travel anywhere. On the other hand there are a lot difficulties in the observing progress. It is really hard to watch the feelings or facial expressions of the parties. One could also have lots of difficulties in eye contact (or observing it) as you just look in your camera to all people.
+
+\subsection{Which insights of the lecture were helpful for your team work?}
+Especially helpful for our team work for me were the team building slides of the lecture. I didn't know anything about the Truckman's Team Building Phases before, which helped me with the flow.
+
+\subsection{Did a team culture develop? How could this be observed?}
+I generally think that we didn't develop a team culture.
+I would see this resulting of we don't have a huge cultural difference but a similar culture.
+
+Beyond you could say we develop at least a little team culture because we all spoke english although (maybe) not needed.
+
+\section{Part 5 – Conflict Management}
+\subsection{Did conflicts occur in the team? How did the team cope with it? How did you feel about it? What was your contribution to the conflict/to the resolution?}
+Generally I would not say that \textsc{conflicts} occurred in our team.
+
+However as said I was uncomfortable with the situation of filming on Zoom and therefore brought this up. The group were very understanding and we could solve this by classification of the members. Indeed I also was uncomfortable with bringing this up and making problems to the others.
+
+In the negotiation there was only one little conflict-alike moment when both parties blamed each other. But the observer fixed it by shifting the solving to a later phase. Later after they understood each other better the conflict didn't come up again and were solved de facto.
+
+\subsection{What conflict styles could you observe among the negotiating parties?}
+I could only observe a discussion style among the parties. No one was really emotional or indirect. They all said what they thought (in an objective way).
+
+\subsection{Did culture have an influence on the conflict? Why/Why not?}
+No all conflicts were based on facts, on real problems which had not any cultural influences.
+
+\section{Part 6 – Feedback}
+\subsection{How was it for you to receive/give feedback?}
+It was good to have questions to answer which give me a leitmotif.
+
+Doubtlessly it was hard for me to be objective but also not to harm anyone with my critics. So it took much more time than just writing what I saw but write it out.
+
+\subsection{What was helpful? What was not?}
+Most helpful for me giving feedback was the list of questions I had and could look at observing the parties. Also taking notes was quite helpful for me. Unhelpful is that the feedback receiver knows where it comes from and therefore the feedback could be not honestly enough.
+
+\subsection{What new things did you learn throughout this process?}
+Myself I  mainly learned throughout this process that it could be more complex if you know the person who you give feedback or vice versa.
+
+\subsection{In which way could you develop intercultural sensitivity/competence?}
+I don't developed any intercultural sensitivity through the feedback process. I would say my feedback is mostly free from any cultural impacts.
+
+\chapter{Mandatory reflection questions}
+\section{What have I learned in my icc class? What motivated my to learn?}
+I learned a lot about team building, cultures and communicate with others. Mostly I was motivated by finish the course but also learn something new and get in contact with others.
+
+\section{When have I learned? In what circumstances? Under what conditions?}
+I have learned at the lecture time, via an online meeting.
+
+\section{What difference did using online formats make in my learning process?}
+Normally it wouldn't make much differences on my learning process except I could watch lectures again.
+
+However it was a little bit complicated to do the group works online because of no one seeing often no one often started to talk and work.
+
+\section{How have I learned or not, and do I know what kind/type/style of learner I am? If yes, did I take this into consideration when organising my learning?}
+I did not actively learn for this course due to no test and mark existing. I'm more like a mix of the learning styles but I would say I'm at most a reading-writing learner and at least an auditory learner.
+
+\section{What difference has learning in this class made in my intellectual, personal, and ethical development?}
+The difference made in this class is that I learned new things on topics like team building. Also I got in contact with different students.
+
+\section{In which way is my learning from this class relevant, applicable, practical?}
+It is relevant in that way, that I'm needing some of the topics like team building in the future (for example at work).
+
+\section{When, how, and why has my learning in this class surprised me?}
+My learning did not surprise me in any way.
+
+\section{What have been the proudest highlights of my learning in this class? What have been the disappointments of my learning in this class? What can I improve?}
+The highlights were when the group work was successfully as we done what we should do.
+The disappointments were the opposite situations, when nobody started to speak.
+
+\section{In what ways has my learning in this class been valuable for me personally?}
+It has been valuable for me personally by knowing now I should talk about my concerns. Often they could be fixed easily instead of dealing with them.
+
+\section{What difference has using a portfolio made in my learning?}
+Using a portfolio did not make any difference in my learning. It is just something I have to do at the end of the course to get my CPs.
+
+
+
+\part{Part Three – Other}
+
+%------------------------------------------------
+
+%\section*{Articles}
+%\addcontentsline{toc}{section}{Articles}
+%\printbibliography[heading=bibempty,type=article]
+
+%------------------------------------------------
+
+%\section*{Books}
+%\addcontentsline{toc}{section}{Books}
+%\printbibliography[heading=bibempty,type=book]
+
+%------------------------------------------------
+
+\section*{Miscellaneous}
+\addcontentsline{toc}{section}{Miscellaneous}
+\nocite{latextemplate}
+\printbibliography[heading=bibempty]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage % Make sure the index starts on an odd (right side) page
+\phantomsection
+\setlength{\columnsep}{0.75cm} % Space between the 2 columns of the index
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
+\printindex % Output the index
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
