@@ -44,6 +44,7 @@ jobs:
         with:
           root_file: main
           compiler: biber
+          args:
           
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
