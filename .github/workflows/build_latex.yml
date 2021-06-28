@@ -51,7 +51,7 @@ jobs:
         with:
           root_file: main.tex
           compiler: pdflatex
-          args: -interaction=nonstopmode -shell-escape x 2
+          args: -interaction=nonstopmode -shell-escape
           
       - name: Publish to GitHub pages
         if: success() && github.ref == 'refs/heads/main'
