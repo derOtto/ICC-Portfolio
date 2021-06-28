@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-const PDF_PATH = "https://github.com/derOtto/ICC-Portfolio/releases/download/main/main.pdf";
+const PDF_PATH = "main.pdf";
 const PAGE_NUMBER = 1;
 const PAGE_SCALE = 1.5;
 const SVG_NS = "http://www.w3.org/2000/svg";
